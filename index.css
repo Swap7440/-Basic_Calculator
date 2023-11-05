@@ -1,0 +1,62 @@
+.div1 {
+    height: 500px;
+    width: 350px;
+    margin-left: 400px;
+    background-color: rgb(44, 43, 43);
+    border-radius: 10px;
+    
+  }
+  
+  .div1 h1 {
+    text-align: center;
+    margin-top: 70px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .div2 {
+    background-color: white;
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    justify-content: center;
+  }
+  
+  .inputbox {
+    background-color: white;
+    border-radius: 5px;
+    height: 40px;
+    width: 300px;
+    margin: 12px 25px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 18px;
+  }
+  
+  .div2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 50px;
+  }
+  
+  .div2 button {
+    background-color: pink;
+    width: 70px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+body{
+    background-image: url("https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2013/11/cost-of-doing-business-digital-photography-school1.jpg?resize=300%2C215&ssl=1");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    }  

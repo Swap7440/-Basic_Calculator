@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>Calculator Project</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div class="div1">
+    <h1>Basic Calculator</h1>
+    <div>
+      <input class="inputbox" type="text" id="cinput">
+    </div>
+  
+    <div class="div2"> 
+    
+      <div id="c1"><button onclick="handleNum('1')">1</button></div>
+      <div id="c2"><button onclick="handleNum('2')">2</button></div>
+      <div id="c3"><button onclick="handleNum('3')">3</button></div>
+      <div id="c+"><button onclick="handleOp('+')">+</button></div>
+      <div id="c4"><button onclick="handleNum('4')">4</button></div>
+      <div id="c5"><button onclick="handleNum('5')">5</button></div>
+      <div id="c6"><button onclick="handleNum('6')">6</button></div>
+      <div id="c-"><button onclick="handleOp('-')">-</button></div>
+      <div id="c7"><button onclick="handleNum('7')">7</button></div>
+      <div id="c8"><button onclick="handleNum('8')">8</button></div>
+      <div id="c9"><button onclick="handleNum('9')">9</button></div>
+      <div id="c*"><button onclick="handleOp('*')">*</button></div>    
+      <div id="c0"><button onclick="handleNum('0')">0</button></div>
+      <div id="c."><button onclick="handleNum('.')">.</button></div>
+      <div id="c/"><button onclick="handleOp('/')">/</button></div>   
+      <div id="c="><button onclick="handleEq()">=</button></div>
+      <div id="cc"><button onclick="clearAll()">c</button></div>
+      
+    </div>
+  </div>
+</body>
+
+<script>
+
+let str = "";
+let num1 = 0;
+let num2 = 0;
+let op = "";
+let temp = "";
+
+function handleNum(n) {
+  str = str + n;
+  temp = temp + n;
+  document.getElementById("cinput").value = temp;
+}
+
+function handleOp(operator) {
+  num1 = parseFloat(str);
+  op = operator;
+  temp = temp + op;
+  document.getElementById("cinput").value = temp;
+  str = "";
+}
+
+function clearAll() {
+  str = "";
+  temp = "";
+  document.getElementById("cinput").value = "";
+}
+
+function handleEq() {
+  num2 = parseFloat(str);
+
+  let result = 0;
+  if (op === '+') {
+    result = num1 + num2;
+  } else if (op === '-') {
+    result = num1 - num2;
+  } else if (op === '*') {
+    result = num1 * num2;
+  } else if (op === '/') {
+    result = num1 / num2;
+  }
+
+  document.getElementById("cinput").value = result;
+  str = "";
+  temp = "";
+}
+
+</script>
+</html>
